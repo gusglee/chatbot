@@ -1,0 +1,90 @@
+class Chatbot:
+    """ An object that can engage in rudimentary conversation with a human. """
+
+    def __init__(self, name):
+        self.name = name
+
+    def greeting(self):
+        """ Returns the Chatbot's way of introducing itself. """
+        return "Hello, my name is " + self.name +".  "
+
+    def response(self, prompt_from_human):
+        """ Returns the Chatbot's response to something the human said. """
+        return "It is very interesting that you say: '" + prompt_from_human + "'"
+    charlesage=14
+   
+
+# TODO define a class called BoredChatbot
+class BoredChatbot(Chatbot):
+    """Same as Chatbot but gets bored easily"""
+
+    def __init__(self, name):
+        Chatbot.__init__(self, name)
+        self.name = name
+
+    def getsbored(self):
+        return """zzz... Oh excuse me, I dozed off reading that"""
+
+    def response(self, prompt_from_human):
+        if len(prompt_from_human) <= 20:
+            return BoredChatbot.getsbored(self)
+        else:
+            return Chatbot.response(self, prompt_from_human)
+
+
+
+passcode=str(input("enter the password? "))
+if passcode == "thunder":
+    print("access granted")
+else:
+    quit()
+# make a chatbot
+jarvis = Chatbot("jarvis")
+# introduce the chatbot and allow the user to say something
+human_message = input(jarvis.greeting())
+# respond to the user
+print(jarvis.response(human_message))
+input1=str(input("what is your name?  "))
+print(input1+" is a cool name")
+if input1=="jojo":
+        print("you are 12 years old")
+if input1 == "cyrus":
+            print("you are 16 years old")
+            if input2 == asa:
+                print("you are 14 years old")
+if input1 == "mac":
+     print("you are 45 years old")
+     if input1 == "jewel":
+         print("you are 45 years old")
+if input1 == "charles":
+              print("you are 14")
+if input1 == "josephine":
+    print("you are 12 years old")
+
+
+print("...")
+print("...")
+print("i am sorry, i will have to transfer you to friday")
+
+#make a BoredChatbot
+friday = BoredChatbot("friday")
+#introduce the rude lil bastard
+human_message = input(friday.greeting())
+#respond to the user
+print(friday.response(human_message))
+in2=input("hey by the why, do you want to hear a joke? ")
+if in2 =="no":
+   quit()
+if in2 == "yes":
+    in3=input("why did the chicken cross the road? ")
+    if in3 == "to get to the idiot's house":
+        print("good")
+    else:
+      print("to get to the idiot's house")
+in4=input("knock, knock")
+if in4 == "who's there":
+    print("the chicken")
+if in4 == "whos there":
+    print("the chicken")
+if in4 == "who is it":
+    print("the chicken")
